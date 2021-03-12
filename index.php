@@ -32,7 +32,7 @@ if ($_SERVER['REQUEST_METHOD']==='POST') {
 }
 
 
-if(!empty($_SESSION['firstname']) && !empty($_SESSION['lastname'])) {
+if(!empty($_SESSION['firstname']) && !empty($_SESSION['lastname']) && !empty($_SESSION['sports'])) {
     //@todo possible bug below?
     if(empty($_SESSION['id'])) {
         $handle = $pdo->prepare('INSERT INTO user (firstname, lastname, year) VALUES (:firstname, :lastname, :year)');
